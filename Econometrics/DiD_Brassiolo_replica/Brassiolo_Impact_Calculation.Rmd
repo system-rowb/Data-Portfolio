@@ -1,0 +1,418 @@
+---
+title: "Brassiolo"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+# **Impact calculation**
+
+Este documento replica la **Tabla 2** y **Tabla 4** del artículo de Pablo Brassiolo: **Domestic Violence and Divorce Law: When Divorce Threats Become Credible.**
+
+**NOTA**: Algunas diferencias pueden ser encontradas en las estimaciones y errores estándares de algunas regresiones, en particular para la **tabla 1**. Sin embargo, estas variaciones son pequeñas.
+
+## **Resumen**
+
+En el año 2016 el Dr. Pablo Brassiolo, economista en CAF-Banco de Desarrollo de América Latina, escribió un documento que se enfoca en un problema que ha estado presente en todo el mundo con el paso del tiempo, la violencia doméstica. El Dr. se pregunta qué tanto puede afectar una ley o proceso legal de un divorcio en la violencia doméstica.
+
+En el año 2005, España reformó su legislación en temas de divorcio con el objetivo de disminuir las barreras del mismo. Esta reforma constó en dos partes principales, la primera fue eliminar el periodo de separación de 1 año obligatorio que una pareja debía tener antes de poder seguir con el divorcio. La segunda, se permite el divorcio unilateral, es decir, no es obligatorio que ambas partes estén de acuerdo. Además, se cambió el periodo de espera que una pareja tenía que esperar para separarse de 1 año a 3 meses posteriores de la fecha de matrimonio y la implementación de las custodias compartidas para los hijos. Estas modificaciones hicieron que el proceso de divorcio o separación se redujera en tiempos y costos tanto económicos como emocionales.
+
+El Dr. Pablo se basó en esta reforma para poder comprobar cómo una legislación familiar en el tema de separación o divorcios puede influir en los índices de violencia doméstica. Lo primero que se encontró fue que la reforma española influyó de inmediato en la tasa de separación ya que en su primer año el número de divorcios aumentó en un 170%. Con base en esto, el estudio delinea un modelo simple de negociación dentro del matrimonio para conocer cómo puede afectar un divorcio sencillo en la incidencia de un conflicto conyugal. Como principal predicción se tiene que una reducción a los costos del divorcio mejora la posición de negociación de las personas abusadas (esposa o esposo) al aumentar su punto de amenaza (el nivel mínimo de utilidad requerido del matrimonio para continuar casado) y que esto conduce a una menor nivel de equilibrio de violencia entre parejas. Lo segundo que encontró es que la reforma redujo el costo de terminar una relación para las parejas que estaban legalmente casadas cuando la ley entró en vigencia, pero no para parejas no casadas, por lo que el trabajo empírico sigue una metodología de diferencias en diferencias.
+
+Los hallazgos apuntan a una disminución en la violencia doméstica después de la reforma en España. El análisis reveló una disminución de la violencia doméstica entre los matrimonio respecto a las parejas no casadas de entre un 27% y un 36%. El acceso a un divorcio más sencillo ha reducido la violencia doméstica en los matrimonio ya que la amenaza de separación es más creíble con un proceso más sencillo. Sin embargo, se encontró que las mujeres con hijos pequeños fueron menos afectadas por la reforma que aquellas sin hijos.
+
+## **Pregunta a resolver**
+
+El Dr. Pablo Brassiolo se hace la pregunta sobre cómo se ve afectada la violencia doméstica con las políticas familiares, específicamente aquellas sobre la separación o divorcio.
+
+## **La importancia de la pregunta**
+
+Como se mencionó anteriormente, el documento aborda un problema social que ha estado afectando a todo el mundo que es la violencia doméstica. Estadísticas sobre los países europeos muestran que entre el 20 y 25% de las mujeres han sido víctimas de abuso físico por lo menos una vez en su vida adulta y que alrededor del 10% ha sufrido abuso sexual por medio de la fuerza. En Estados Unidos, la Encuesta Nacional de Violencia en contra de las Mujeres (National Violence against Women Survey) muestra que 1 de 3 mujeres ha sido violada o abusada físicamente en su vida adulta. La mayoría de los casos de violencia en contra de mujeres son cometidos por sus parejas.
+
+## **Base de datos usada**
+
+El estudio utiliza una base de datos basada en una encuesta sobre violencia en contra de las mujeres en España. Esta base de datos cuenta con datos de antes y después de la reforma aplicada a la ley de divorcio o separación.
+
+$$DV_{igt} = \beta_0 + \beta_1 Married + \beta_2(Married_g \times Post_t) + \sum_t \lambda_t Year_t + X \gamma + \mu_{igt}$$
+
+Se utilizó la ecuación anterior para los modelos realizados, donde DVigt es una medida de violencia doméstica para el individuo i, grupo marital g y año t; Marriedg es el indicador del grupo de tratamiento, Postt es el indicador para el periodo posterior a la reforma y B2 el estimador de diferencias en diferencias.
+
+
+## **Replique tabla 2**
+
+La tabla 2 muestra los resultados de la estimación de la ecuación antes mencionada por mínimos cuadrados ordinarios cuando la variable dependiente es la dummy para los reportes de abuso hechos por uno mismo. La columna 1 presenta los resultados de una muestra sin controles más allá del indicador de tratamiento y las dummies. El coeficiente sugiere una disminución del 0.75 puntos porcentuales en el abuso reportado por uno mismo para el grupo de tratamiento en comparación al grupo de control después de la reforma. 
+
+La columna 2 muestra controles individuales como son edad, educación, estado civil, presencia y número de hijos, estatus migratorio y religión mientras que la columna 3 también incluye la región. Una vez controladas estas características individuales el coeficiente sigue siendo significativo, un divorcio más sencillo reduce el abuso en 0.65 puntos porcentuales, el 29% de la media muestral. La columna 4, muestra los resultados con la característica de la educación de la pareja y el estado laboral, con estos rubros la violencia disminuye en 0.59 puntos porcentuales.
+
+La columna 5 muestra los resultados de cómo cambia la violencia doméstica con un cambio en la posición negociadora (esposa que amenaza con el divorcio), los resultados toman en cuenta el grupo de tratamiento es de mujeres que estaban casadas cuando se aprobó la ley, el resultado equivale a un 36% de reducción de la media muestral. Por último, la columna 6 muestra una prueba placebo en la que la variable dependiente es igual a 1 si la persona sufrió de abuso en los últimos 12 meses. Al ser en un periodo que precede a la reforma, por ende no debería de verse afectado y los resultados así lo demuestran. El coeficiente es insignificante estadísticamente.
+
+## **Replique tabla 4**
+
+Durante el documento se considera que las mujeres con hijos pequeños se ven menos afectadas por la reforma que aquellas sin hijos o con hijos mayores. Por lo mismo, la tabla 4 muestra esta afirmación, se consideraron la presencia de hijos menores de 18 años que viven en el hogar vs aquellas mujeres sin hijos o con hijos mayores de 18 años.
+
+En la tabla se muestra en el grupo A aquellas mujeres con hijos menores y en el grupo B las que no tienen o son mayores de 18 años. Los resultados muestran que los efectos de la reforma favorecen al grupo sin hijos o que son mayores. En este sentido, no tener hijos hace que aprovechar la legislación sea más sencilla.
+
+Para poder entender mejor, se analiza lo que pasaba antes de la reforma, las mujeres con hijos pequeños reportaban un mayor nivel de violencia que aquellas que sin hijos, aproximadamente del 2%. Al presentar un mayor nivel de violencia antes de la reforma se esperaba que, si bien disminuyó, no lo hiciera tanto en comparación con el grupo de control, mujeres sin hijos o con hijos mayores.
+
+## **Conclusión**
+
+El estudio tuvo como objetivo ver en qué medida un cambio en las legislaciones de ámbito familiar, como una ley de divorcio, puede generar un cambio en los niveles de violencia doméstica. Para lo anterior, se tomó como referencia la reforma a la ley de divorcio que sucedió en España en 2005. Misma que elimina el periodo de 1 año de separación previo al divircio y permite un divorcio no pactado, es decir, una sola persona tiene que estar de acuerdo en lugar de las dos partes. Lo que provocó que los tiempos se redujeran.
+
+Utilizando una metodología de diferencias en diferencias, se comprobó que efectivamente el poder tener un divorcio más sencillo disminuye los niveles de violencia doméstica que sufren las mujeres. Sin embargo, existen grupos de mujeres que se ven más beneficiadas que otras. Se encontró que el grupo de mujeres con hijos menores a los 18 años se ven menos afectadas por esta reforma que aquellas mujeres que no tienen hijos o que son mayores. 
+
+
+# **Código de las tablas**
+
+```{r message=FALSE, warning=FALSE}
+# Load libraries and set the working directory
+library(dplyr)
+library(tidyverse)
+library(haven)
+library(estimatr)
+library(lmtest)
+library(sandwich)
+
+robust_lm <- function(lm) {
+  # Returns a similar value as reg, robust option in STATA
+  return(coeftest(lm, vcov = vcovHC(lm, type="HC1")))
+}
+```
+
+## **Table 4. Impact on Self-Reported Abuse**
+
+```{r}
+# TABLE 2: Impact on self-reported abuse
+data <- read_stata("@Data/macrosurvey_final.dta")
+
+# Drop inconsistent obs: women without current nor past partner ever who say they are
+# victims of partner
+
+data <- data[!(data$marital == 1
+               & data$q5 == 2
+               & (data$sexual_v == 1 | data$physi_v == 1 | data$psycho1_v == 1 | data$psycho2_v == 1)),]
+
+data <- data[!((data$marital == 1 | data$marital == 7) & data$couple == 0 
+              & case_when(data$q29 >= 2 & data$q29 <= 99 ~ T, T ~ F)),]
+
+data <- data[!(is.na(data$duration) & data$marital == 4), ]
+
+```
+
+Crea las variables dummy para las regresiones.
+
+```{r}
+data$treated <- case_when(case_when(data$marital == 4 & data$duration > 1 ~ T, T ~ F)
+                          | data$marital == 5
+                          | case_when(data$marital == 6 & data$q29 == 1 ~ T, T ~ F)
+                          | case_when(data$marital == 7 & data$q29 == 1 ~ T, T ~ F) ~ 1,
+                          T ~ 0)
+
+data$post <- case_when(data$year == 2006 ~ 1, T ~ 0)
+
+data$treatedpost <- data$treated * data$post
+
+data$ipv_ly = data$ipv_ly * 100
+
+data$placebo = data$placebo * 100
+```
+
+### **Regresiones**
+
+```{r}
+# Regression 1
+blm <- ("ipv_ly ~ treatedpost + treated + year2 + year3") # Base linear model
+lm1 <- lm(blm, data[data$agegr <= 5,])
+summary(lm1)
+coeftest(lm1, vcov = vcovHC(lm1, type = "HC1"))
+```
+
+```{r}
+# Regression 2
+controlv1 <- "civils1 + civils2 + civils3 + civils4 + civils5"
+controlv1 <- paste(controlv1, "+ age1 + age2 + age3 + age4 + age5")
+controlv1 <- paste(controlv1, "+ edu1 + edu2 + edu3 + edu4")
+controlv1 <- paste(controlv1, "+ employed + unemp + housewife + aporta")
+controlv1 <- paste(controlv1, "+ chi04h + chi418h + nchildren + immig")
+controlv1 <- paste(controlv1, "+ religion1 + religion2 + religion3 + religion4 + religion5")
+
+lm2 <- lm(paste("ipv_ly ~ treatedpost + treated + year2 + year3 +", controlv1),
+          data[data$agegr <= 5,])
+summary(lm2)
+robust_lm(lm2)
+```
+
+```{r}
+# Regression 3
+controlv2 <- ""
+for (i in seq(2:19)) {
+  controlv2 <- paste(controlv2, paste0("ccaa", i), sep = " + ")
+}
+controlv2 <- paste(controlv2, "urban", sep = " + ")
+controlv2
+
+lm3 <- lm(paste(blm, controlv1, controlv2, sep = " + "),
+          data[data$agegr <= 5,])
+summary(lm3)
+```
+
+```{r}
+# Regression 4
+controlv3 <- "edu_h2 + edu_h3 + edu_h4 + part_h + fullt_h"
+lm4 <- lm(paste(blm, controlv1, controlv2, controlv3, sep = " + "),
+             data[data$agegr <= 5, ])
+summary(lm4)
+```
+
+```{r}
+# Regression 5
+data$barg <- case_when(data$marital == 5
+                       | (data$marital == 6 & data$q29 == 1)
+                       | (data$marital == 4 & data$cohab == 0) ~ 0, T ~ 1)
+lm5 <- lm(paste(blm, controlv1, controlv2, sep = " + "),
+          data[data$agegr <= 5 & data$barg == 1, ])
+summary(lm5)
+```
+
+```{r}
+# Regression 6
+lm6 <- lm(paste("placebo ~ treatedpost + treated + year2 + year3", controlv1, controlv2, sep = " + "),
+          data[data$agegr <= 5,])
+summary(lm6)
+```
+
+```{r}
+# Create table 2
+table2 <- matrix(nrow = 12, ncol = 6)
+
+lms <- list(lm1, lm2, lm3, lm4, lm5, lm6) # List of linear models
+individual_controls <- c("No", "Yes", "Yes", "Yes", "Yes", "Yes")
+year_dummies <- c("Yes", "Yes", "Yes", "Yes", "Yes", "Yes")
+region_controls <- c("No", "No", "Yes", "Yes", "Yes", "Yes")
+partner_controls <- c("No", "No", "No", "Yes", "No", "No")
+
+
+for (i in seq(length(lms))) {
+  lm_i <- lms[[i]] # Linear model at index i
+  lm_i_se <- sqrt(diag(vcov(lm_i)))
+  married_x_post <- lm_i$coefficients["treatedpost"][[1]] # Select the coefficient
+  mxp_se <- lm_i_se["treatedpost"][[1]] # Get the standard error of treatedpost
+  married <- lm_i$coefficients["treated"][[1]] # Select treated coefficient
+  married_se <- lm_i_se["treated"][[1]] # Get the standard error for treated
+  ic <- individual_controls[i]
+  yd <- year_dummies[i]
+  rc <- region_controls[i]
+  pc <- partner_controls[i]
+  r2 <- summary(lm_i)$r.squared
+  n <- (lm_i$model %>% dim())[1] # Get the number of observations
+  rmse <- lm_i$residuals ** 2 %>% mean() %>% sqrt() # calculate the RMSE
+  depvar_mean <- lm_i$model[, 1] %>% mean() # Get the mean from the dependent variable
+  
+  col_i <- c(married_x_post, mxp_se, married, married_se,
+             ic, yd, rc, pc,
+             r2, n, rmse, depvar_mean) # Combine all the variables into a single vector
+  
+  table2[, i] <- col_i # Define the i column with the col_i
+}
+
+# Set the row names
+row.names(table2) <- c("Married x Post (coefficient)",
+                       "Married x Post (std. error)",
+                       "Married (coefficient)",
+                       "Married (std. error)",
+                       "Individual controls",
+                       "Year dummies",
+                       "Region controls",
+                       "Partner controls",
+                       "Adjusted R2",
+                       "N",
+                       "RMSE",
+                       "Mean (depvar)")
+
+write.csv("@Data/Table2_R.csv")
+table2
+```
+
+## **Table 4. Heterogeneous Impact by Presence of Young Children Using Unmarried Women as Control Group**
+
+**NOTA**: Tras diferentes métodos de filtrar la información, no fue posible identificar el error que producía que los resultados de las regresiones fueran realmente diferentes a las tablas generadas por el autor. Por lo tanto, se utilizó la base de datos filtrada por **STATA** para la primera parte de la elaboración de la tabla. Aún así, se anexa el código en **R**, que debería de replicar el mismo proceso.
+
+Importa la información y filtra
+
+```{r}
+# TABLE 4. Heterogeneus impact by presence of young children using unmarried
+# as control group.
+data <- read_stata("@Data/macrosurvey_final.dta")
+
+data <- data[!(data$marital == 1
+               & case_when(data$q5 == 2 ~ T, T ~ F)
+               & (data$sexual_v == 1 | data$physi_v == 1 | data$psycho1_v == 1 | data$psycho2_v == 1)),]
+
+data <- data[!((data$marital == 1 | data$marital == 7) & data$couple == 0 
+               & case_when(data$q29 >= 2 ~ T, T ~ F)
+               & case_when(data$q29 <= 99 ~ T, T ~ F)),]
+```
+
+Crea las variables dummy
+
+```{r}
+data$treated <- case_when(case_when((data$marital == 4 & data$duration > 1) ~ T, T ~ F)
+                          | data$marital == 5
+                          | case_when(data$marital == 6 & data$q29 == 1 ~ T, T ~ F)
+                          | case_when(data$marital == 7 & data$q29 == 1 ~ T, T ~ F) ~ 1,
+                          T ~ 0)
+
+data$post <- case_when(data$year == 2006 ~ 1, T ~ 0)
+
+data$treatedpost <- data$treated * data$post
+
+data$nochi018h <- case_when(data$chi018h == 0 ~ 1, T ~ 0)
+
+data$treatednochi018h <- data$post * data$nochi018h
+
+data$treatedpostnochi018h <- data$treated * data$post * data$nochi018h
+
+data$ipv_ly <- data$ipv_ly * 100
+```
+
+Elabora la tabla con la data de **STATA**
+
+```{r}
+# Even though we tried different types of filter methodologies, somehow the
+# final linear regression results get different. So, the loaded data in stata
+# is used for this case, but the methodology for R is replicated above.
+data_stata <- read_stata("@Data/table_4_R.dta")
+
+# Define the control variable
+controlv <- paste("year2 + age2 + age3 + age4 + age5",
+                  "edu2 + edu3 + edu4",
+                  "employed + unemp + housewife + children + nchildren + aporta + urban",
+                  sep = " + ")
+
+# Create a loop for ccaa2-cca18
+for (i in seq(2:19)) {
+  controlv <- paste(controlv, paste0("ccaa", i), sep = " + ")
+}
+
+# Add the the variables left
+controlv <- paste(controlv,
+                  "religion2 + religion3 + religion4 + religion5",
+                  sep = " + ")
+
+```
+
+### **Regresiones**
+
+```{r}
+# Regression 1
+lm1 <- lm(paste("ipv_ly ~ treatedpost + treated + post",
+                "civils2 + civils3 + civils4 + civils5",
+                controlv, sep = " + "),
+          data_stata,
+          agegr <= 5 & nochi018h == 1
+          )
+summary(lm1)
+robust_lm(lm1)
+```
+
+```{r}
+# Regression 2
+lm2 <-lm(paste("ipv_ly ~ treatedpost + treated + post",
+               "civils2 + civils3 + civils4 + civils5",
+               controlv, sep = " + "),
+         data_stata,
+         agegr <= 5 & nochi018h == 0
+)
+summary(lm2)
+robust_lm(lm2)
+```
+
+```{r}
+# Regression 3
+data_stata2 <- data_stata[data_stata$couple == 1
+                          | (data_stata$marital == 4 & data_stata$couple == 0),]
+
+data_stata2 <- data_stata2[!(data_stata2$marital == 4 & case_when(is.na(data_stata2$duration) ~ T, T ~ F)),]
+
+data_stata2$tech_v <- data_stata2$tech_v * 100
+
+lm3 <- lm(paste("tech_v ~ treatedpost + treated + post",
+                "edu_h2 + edu_h3 + edu_h4",
+                "part_h + fullt_h",
+                controlv, sep = " + "),
+          data_stata2,
+          agegr <= 5 & nochi018h==1)                                                
+summary(lm3)
+robust_lm(lm3)
+
+```
+
+```{r}
+# Regression 4
+lm4 <- lm(paste("tech_v ~ treatedpost + treated + post",
+                "edu_h2 + edu_h3 + edu_h4",
+                "part_h + fullt_h",
+                controlv, sep = " + "),
+          data_stata2,
+          agegr <= 5 & nochi018h==0)                                                
+summary(lm4)
+robust_lm(lm4)
+```
+
+Crea la tabla
+
+```{r}
+# Create a vector with the name of the rownames
+t4.rownames <- c("A. Women with young children:",
+                 "A. Married x Post",
+                 "A. Married x Post (std. error)",
+                 "A. Married",
+                 "A. Married (std. error)",
+                 "A. Post",
+                 "A. Post (std. error)",
+                 "B. Women without young children:",
+                 "B. Married x Post",
+                 "B. Married x Post (std. error)",
+                 "B. Married",
+                 "B. Married (std. error)",
+                 "B. Post",
+                 "B. Post (std. error)"
+                 )
+
+# Create a vector with the name of the columns
+t4.colnames <- c("Self-Reported Abuse (1)", "Technical Abuse (2)")
+
+
+# Create a list with the varibles to be displayed in the table
+t4.variables <- c("treatedpost", "treated", "post")
+
+# Create a list with linear models
+lms <- list(lm2, lm1, lm4, lm3)
+
+# Create an empty list for appending the results of each model
+lms_results <- c()
+
+# Create a loop and read all the linear models
+for (lm in lms) {
+  lm_ir <- lm %>% robust_lm()
+
+  t4.r <- c("") # Define an empty vector for storage
+  for (var in t4.variables) {
+    estimate <- lm_ir[var, "Estimate"]
+    se <- lm_ir[var, "Std. Error"]
+    
+    t4.r <- t4.r %>% append(c(estimate, se))
+  }
+  
+  lms_results <- lms_results %>% append(t4.r,)
+}
+
+# Show the results
+t4 <- cbind(lms_results[1:14], lms_results[15:length(lms_results)]) %>% 
+  as.data.frame()
+row.names(t4) <- t4.rownames
+colnames(t4) <- t4.colnames
+t4
+
+# Save the dataframe into a csv file
+write.csv(t4, "@Data/table_4_R.csv")
+```
