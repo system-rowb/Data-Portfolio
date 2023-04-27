@@ -28,7 +28,7 @@ This is a repository with various data-related projects, considering **Analytics
     ```
 
 ## **Visualization**
-- [**Análisis Geográfico de las sucursales OXXO en la Ciudad de México**](https://github.com/system-rowb/Data-Portfolio/tree/main/Visualization/GEOsucursales_OXXO): Visuals from a **geospacial analysis** considering the OXXO's branches within Mexico City.
+- [**Análisis Geográfico de las sucursales OXXO en la Ciudad de México**](https://github.com/system-rowb/Data-Portfolio/tree/main/Visualization/GEOsucursales_OXXO): Visuals from a **geospatial analysis** considering the OXXO's branches within Mexico City.
 
     ![onepager_OXXO](https://github.com/system-rowb/Data-Portfolio/blob/main/Visualization/GEOsucursales_OXXO/data/onepager_OXXO.png)
 
