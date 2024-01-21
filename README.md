@@ -3,13 +3,21 @@
 This is a repository with various data-related projects, considering **Analytics**, **Visualization**, **Automation**, **Machine Learning**, **Natural Language Processing**, **Data Science**, **Econometrics** and others.
 
 ---
+## **ENOE $^N$: Un Análisis Geoespacial de la Informalidad en México 2022 Trimestre 1**
 
+**Topic**: [economics](https://img.shields.io/badge/Economics-green)[visualization](https://img.shields.io/badge/Visualization-blue)
 
-## **Natural Language Processing (NLP)**
-- [**Fake vs. Real: A Sentiment Analysis and Prediction of Political News**](https://github.com/system-rowb/Data-Portfolio/tree/main/NLP/Fake_news): A project that consists of the sentiment analysis and prediction of a subset of fake and real - political news. An exploratory analysis with **wordcloud** and **venn diagram** is performed in order to visualize the words within the dataset. Also a **Naive Bayes Classifier** is developed for **political fake news prediction**.
+A project that analyzes **informal employment** in Mexico, 2022 from a **geospacial** perspective. This work is able to visualize **sociodemographic** variables that describe the population of mexican states and municipalities, and how they relate with **informal employment** and **poverty**.
 
+One of the main conclusions is that there is a strong correlation between **multidimensional poverty rate** and the **informal employment rate**.
 
-    ![wordclouds_only](https://github.com/system-rowb/Data-Portfolio/blob/main/NLP/Fake_news/img/wordclouds_only.png)
+![poverty_informality_correlation](https://github.com/system-rowb/Data-Portfolio/tree/main/Visualization/GEO_Informalidad_Mexico/imgs/poverty_informality_correlation.PNG)
+
+## [**Fake vs. Real: A Sentiment Analysis and Prediction of Political News**](https://github.com/system-rowb/Data-Portfolio/tree/main/NLP/Fake_news)
+
+A project that consists of the sentiment analysis and prediction of a subset of fake and real - political news. An exploratory analysis with **wordcloud** and **venn diagram** is performed in order to visualize the words within the dataset. Also a **Naive Bayes Classifier** is developed for **political fake news prediction**.
+
+![wordclouds_only](https://github.com/system-rowb/Data-Portfolio/blob/main/NLP/Fake_news/img/wordclouds_only.png)
 
     ```python
     / \--------------------------------------, 
@@ -27,10 +35,13 @@ This is a repository with various data-related projects, considering **Analytics
     > Test set - accuracy: 94.0%
     ```
 
-## **Visualization**
-- [**Análisis Geográfico de las sucursales OXXO en la Ciudad de México**](https://github.com/system-rowb/Data-Portfolio/tree/main/Visualization/GEOsucursales_OXXO): Visuals from a **geospatial analysis** considering the OXXO's branches within Mexico City.
+## [**Análisis Geográfico de las sucursales OXXO en la Ciudad de México**](https://github.com/system-rowb/Data-Portfolio/tree/main/Visualization/GEOsucursales_OXXO)
 
-    ![onepager_OXXO](https://github.com/system-rowb/Data-Portfolio/blob/main/Visualization/GEOsucursales_OXXO/data/onepager_OXXO.png)
+Visuals from a **geospatial analysis** considering the OXXO's branches within Mexico City.
 
-## **Econometrics**
-- [**Brassiolo's Domestic Violence and Divorce Law - results replica**](https://github.com/system-rowb/Data-Portfolio/tree/main/Econometrics/DiD_Brassiolo_replica): This project replicates and translates from **STATA** to **R** some of the results tables of Brassilo's [*Domestic Violence and Divorce Law: When Divorce Threats Become Credible*](https://www.jstor.org/stable/26553209) paper.
+![onepager_OXXO](https://github.com/system-rowb/Data-Portfolio/blob/main/Visualization/GEOsucursales_OXXO/data/onepager_OXXO.png)
+
+## [**Brassiolo's Domestic Violence and Divorce Law - results replica**](https://github.com/system-rowb/Data-Portfolio/tree/main/Econometrics/DiD_Brassiolo_replica)
+
+
+This project replicates and translates from **STATA** to **R** some of the results tables of Brassilo's [*Domestic Violence and Divorce Law: When Divorce Threats Become Credible*](https://www.jstor.org/stable/26553209) paper.
