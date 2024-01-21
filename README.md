@@ -3,7 +3,7 @@
 This is a repository with various data-related projects, considering **Analytics**, **Visualization**, **Automation**, **Machine Learning**, **Natural Language Processing**, **Data Science**, **Econometrics** and others.
 
 ---
-## **ENOE $^N$: Un Análisis Geoespacial de la Informalidad en México 2022 Trimestre 1**
+## [**ENOE $^N$: Un Análisis Geoespacial de la Informalidad en México 2022 Trimestre 1**](https://github.com/system-rowb/Data-Portfolio/tree/main/Visualization/GEO_Informalidad_Mexico)
 
 
 ![python](https://img.shields.io/badge/Python-3776AB)
@@ -15,7 +15,7 @@ A project that analyzes **informal employment** in Mexico, 2022 from a **geospac
 
 One of the main conclusions is that there is a strong correlation between **multidimensional poverty rate** and the **informal employment rate**.
 
-![poverty_informality_correlation](https://github.com/system-rowb/blob/main/Visualization/GEO_Informalidad_Mexico/imgs/poverty_informality_correlation.png)
+![poverty_informality_correlation](https://github.com/system-rowb/Data-Portfolio/blob/main/Visualization/GEO_Informalidad_Mexico/imgs/poverty_informality_correlation.png)
 
 ## [**Fake vs. Real: A Sentiment Analysis and Prediction of Political News**](https://github.com/system-rowb/Data-Portfolio/tree/main/NLP/Fake_news)
 
